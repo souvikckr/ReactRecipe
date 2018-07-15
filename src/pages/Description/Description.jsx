@@ -5,7 +5,12 @@ import "./Description.css";
 class Description extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+    //   ingredients: {
+    //     name: "",
+    //     list: [{ name: "", count: "" }]
+    //   }
+    };
   }
 
   componentDidMount() {
@@ -16,6 +21,10 @@ class Description extends Component {
     console.log("--target value--", e.target.value);
     this.props.addActiveRecipe(JSON.parse(e.target.value));
   };
+
+  handleAddToCart = () => {
+    this.props.addRecipeToCart(this.props.activeRecipe)
+  }
 
   /* eslint-disable react/jsx-filename-extension */
   render() {
@@ -40,6 +49,7 @@ class Description extends Component {
         );
       });
     }
+
     const desc = (
       <div className="desc-conatiner">
         <div>
@@ -57,6 +67,9 @@ class Description extends Component {
         <div className="ingr">
           <div>Ingredients</div>
           {ingr}
+        </div>
+        <div>
+          <Button onClick={this.handleAddToCart}>Add To Cart</Button>
         </div>
       </div>
     );

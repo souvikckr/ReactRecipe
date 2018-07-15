@@ -3,9 +3,11 @@ import Description from "./Description.jsx";
 
 // action creators
 import { addActiveRecipe } from './../../modules/recipe';
+import { addRecipeToCart } from './../../modules/cart'
 
 const mapDispatchToProps =  {
-    addActiveRecipe
+    addActiveRecipe,
+    addRecipeToCart
 };
 
 const mapStateToProps = state => ({

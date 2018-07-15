@@ -1,7 +1,9 @@
 import recipeReducer from "./recipe";
+import cartReducer from "./cart"
 
 const appReducers = {
-  recipeReducer
+  recipeReducer,
+  cartReducer
 };
 
 export default appReducers;
