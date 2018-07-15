@@ -6,6 +6,7 @@
 // ------------------------------------
 
 export const ADD_RECIPE = 'ADD_RECIPE';
+export const ACTIVE_RECIPE = 'ACTIVE_RECIPE';
 
 // ------------------------------------
 // Action Creators
@@ -15,6 +16,11 @@ export const addRecipe = (recipe) => ({
   type: ADD_RECIPE,
   payload: recipe,
 });
+
+export const addActiveRecipe = (recipe) => ({
+    type: ACTIVE_RECIPE,
+    payload: recipe
+})
 
 // ------------------------------------
 // Action Creators ( For Asynchronous calls )
@@ -36,6 +42,10 @@ const ACTION_HANDLERS = {
   [ADD_RECIPE]: (state, action) => ({
     ...state,
     recipes: [...state.recipes, action. payload],
+  }),
+  [ACTIVE_RECIPE]: (state, action) => ({
+      ...state,
+      activeRecipe: action.payload
   })
 };
 
@@ -45,6 +55,7 @@ const ACTION_HANDLERS = {
 
 const initialState = {
   recipes: [],
+  activeRecipe: 'No Active recipe'
 };
 
 export default (state = initialState, action) => {

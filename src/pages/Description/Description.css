@@ -1,9 +1,36 @@
 .overview-col-1 {
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  box-shadow: 0 0.125rem 0.625rem 0 rgba(0, 0, 0, 0.2); 
   height: 100vh;
 }
 
 .overview-col-2 {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: 100vh;
+}
+
+.recipe-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.desc-conatiner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+} 
+.desc-conatiner div{
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.ingr {
+    display: flex !important;
+    flex-direction: column !important;
+}
+.ingr-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
