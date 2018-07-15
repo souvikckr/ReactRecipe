@@ -1,0 +1,24 @@
+h1, p {
+    font-family: Lato;
+  }
+  
+  .container{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    align-self: center;
+  }
+  
+  .ing-list-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .ing-trash {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    font-size: 2rem;
+  }
+  
