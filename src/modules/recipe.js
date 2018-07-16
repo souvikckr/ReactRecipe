@@ -1,4 +1,3 @@
-//imports
  // ------------------------------------
 // Constants
 // ------------------------------------
@@ -9,7 +8,7 @@ export const ADD_TO_CART = "ADD_TO_CART";
 export const DELETE_RECIPE = "DELETE_RECIPE";
 
 // ------------------------------------
-// Action
+// Action Creators
 // ------------------------------------
 
 export const addRecipe = recipe => ({
@@ -32,45 +31,7 @@ export const deleteRecipe = recipes => ({
   payload: recipes
 });
 
-// ------------------------------------
-// Action Creators ( For Asynchronous calls )
-// ------------------------------------
 
-// export const addRecipeToCartFromRed = (recipe) => {
-//   dispatch(addRecipeToCart(recipe))
-// }
-
-// export const actions = {
-//     addRecipe,
-// };
-
-// ------------------------------------
-// Actions
-// ------------------------------------
-
-const ACTION_HANDLERS = {
-  [ADD_RECIPE]: (state, action) => ({
-    ...state,
-    recipes: [...state.recipes, action.payload],
-  }),
-  [ACTIVE_RECIPE]: (state, action) => ({
-    ...state,
-    activeRecipe: action.payload
-  }),
-  [ADD_TO_CART]: (state, action) => ({
-    ...state,
-    cartRecipes: [...state.cartRecipes, action.payload]
-  }),
-  [DELETE_RECIPE]: (state, action) => ({
-    ...state,
-    cartRecipes: action.payload,
-    recipes: action.payload
-  }),
-};
-
-// ------------------------------------
-// Reducer
-// ------------------------------------
 
 const initialState = {
   recipes: [],
@@ -78,7 +39,34 @@ const initialState = {
   activeRecipe: "No Active recipe"
 };
 
+// ------------------------------------
+// Reducer
+// ------------------------------------
+
 export default (state = initialState, action) => {
-  const handler = ACTION_HANDLERS[action.type];
-  return handler ? handler(state, action) : state;
+  switch(action.type) {
+    case ADD_RECIPE: 
+    return {
+      ...state,
+      recipes: [...state.recipes, action.payload],
+    }
+    case ACTIVE_RECIPE:
+    return {
+      ...state,
+      activeRecipe: action.payload
+    }
+    case ADD_TO_CART:
+    return {
+      ...state,
+      cartRecipes: [...state.cartRecipes, action.payload]
+    }
+    case DELETE_RECIPE: 
+    return {
+      ...state,
+      cartRecipes: action.payload,
+      recipes: action.payload
+    }
+    default:
+    return state
+  }
 };
