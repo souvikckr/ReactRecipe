@@ -24,6 +24,7 @@ class Description extends Component {
 
   handleAddToCart = () => {
     this.props.addRecipeToCart(this.props.activeRecipe)
+    // this.props.addRecipeToCartFromRed(this.props.activeRecipe);
   }
 
   /* eslint-disable react/jsx-filename-extension */

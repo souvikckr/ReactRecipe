@@ -1,14 +1,23 @@
 import { connect } from "react-redux";
 import Description from "./Description.jsx";
+import { bindActionCreators } from "redux";
 
 // action creators
-import { addActiveRecipe } from './../../modules/recipe';
-import { addRecipeToCart } from './../../modules/cart'
+import { addActiveRecipe, addRecipeToCart } from './../../modules/recipe';
+// import { addRecipeToCart } from './../../modules/recipe'
 
 const mapDispatchToProps =  {
     addActiveRecipe,
     addRecipeToCart
 };
+
+// function mapDispatchToProps(dispatch) {
+//     return bindActionCreators({
+//         addActiveRecipe,
+//         addRecipeToCart
+//         // addRecipeToCartFromRed
+//     }, dispatch);
+// }
 
 const mapStateToProps = state => ({
     recipes: state.recipeReducer.recipes,

@@ -1,6 +1,5 @@
-// API imports
-
-// ------------------------------------
+//imports
+ // ------------------------------------
 // Constants
 // ------------------------------------
 
@@ -37,8 +36,8 @@ export const deleteRecipe = recipes => ({
 // Action Creators ( For Asynchronous calls )
 // ------------------------------------
 
-// export const addRecipeToStore = (recipe) => (dispatch) => {
-//     dispatch(addRecipe(recipe));
+// export const addRecipeToCartFromRed = (recipe) => {
+//   dispatch(addRecipeToCart(recipe))
 // }
 
 // export const actions = {
@@ -52,7 +51,7 @@ export const deleteRecipe = recipes => ({
 const ACTION_HANDLERS = {
   [ADD_RECIPE]: (state, action) => ({
     ...state,
-    recipes: [...state.recipes, action.payload]
+    recipes: [...state.recipes, action.payload],
   }),
   [ACTIVE_RECIPE]: (state, action) => ({
     ...state,
