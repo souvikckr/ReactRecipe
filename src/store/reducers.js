@@ -1,13 +1,14 @@
-import { combineReducers } from 'redux';
-import reducers from './../modules';
+// import { combineReducers } from 'redux';
+// import reducers from './../modules';
 
-const appReducer = combineReducers(reducers);
+// const appReducer = combineReducers(reducers);
 
-// Refer: https://stackoverflow.com/a/35641992/5271656
-/* eslint-disable no-param-reassign */
-const rootReducer = (state, action) => {
+// // Refer: https://stackoverflow.com/a/35641992/5271656
+// /* eslint-disable no-param-reassign */
+// const rootReducer = (state, action) => {
  
-  return appReducer(state, action);
-};
+//   return appReducer(state, action);
+// };
 
-export default rootReducer;
+// export default rootReducer;
+

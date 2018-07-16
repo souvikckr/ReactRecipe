@@ -6,10 +6,15 @@ import { bindActionCreators } from "redux";
 import { addActiveRecipe, addRecipeToCart } from './../../modules/recipe';
 // import { addRecipeToCart } from './../../modules/recipe'
 
-const mapDispatchToProps =  {
-    addActiveRecipe,
-    addRecipeToCart
-};
+// const mapDispatchToProps =  {
+//     addActiveRecipe,
+//     addRecipeToCart
+// };
+
+const mapDispatchToProps = (dispatch) => ({
+    addActiveRecipe:(recipe) => dispatch(addActiveRecipe(recipe)),
+    addRecipeToCart:(recipe) => dispatch(addRecipeToCart(recipe))
+})
 
 // function mapDispatchToProps(dispatch) {
 //     return bindActionCreators({

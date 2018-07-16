@@ -54,16 +54,16 @@ class Description extends Component {
     const desc = (
       <div className="desc-conatiner">
         <div>
-          Name: <Label>{this.props.activeRecipe.name}</Label>
+          <div>Name:</div> <div>{this.props.activeRecipe.name}</div>
         </div>
         <div>
-          Description <Label>{this.props.activeRecipe.description}</Label>
+          <div>Description</div> <div>{this.props.activeRecipe.description}</div>
         </div>
         <div>
-          Image
-          <Label>
+          <div>Image</div>
+          <div>
             <Image src={this.props.activeRecipe.imgUrl} rounded />
-          </Label>
+          </div>
         </div>
         <div className="ingr">
           <div>Ingredients</div>

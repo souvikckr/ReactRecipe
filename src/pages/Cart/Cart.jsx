@@ -13,10 +13,8 @@ class Cart extends Component {
   }
 
   handleDelete = (e) => {
-    console.log("---array before---",this.props.cartRecipes);
     const name = e.target.value;
     const newObj = this.props.cartRecipes.filter(e => (e.name !== name));
-    console.log("---array after---", newObj);
     this.props.deleteRecipe(newObj);
   }
 
@@ -33,8 +31,8 @@ class Cart extends Component {
             </td>
             <td><Button bsStyle="danger" value={recipe.name} onClick={this.handleDelete}>Delete Item</Button></td>
           </tr>
-        );
-      });
+        )
+      })
     }
     return (
       <div>
@@ -48,7 +46,7 @@ class Cart extends Component {
             </tr>
           </thead>
           <tbody>{recipes}</tbody>
-        </Table>;
+        </Table>
       </div>
     );
   }

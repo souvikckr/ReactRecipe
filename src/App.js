@@ -5,7 +5,7 @@ import Description from "./pages/Description";
 import Cart from "./pages/Cart";
 import NavbarComponent from "./components/Navbar";
 import { Provider } from "react-redux";
-import store from "./store";
+import store from "./store/configureStore";
 import "./App.css";
 
 class App extends Component {

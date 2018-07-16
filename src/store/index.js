@@ -1,7 +1,7 @@
-import configureStore from './configureStore';
+// import configureStore from './configureStore';
 
-const initialState = {};
+// const initialState = {};
 
-const store = configureStore(initialState);
+// const store = configureStore(initialState);
 
-export default store;
+// export default store;

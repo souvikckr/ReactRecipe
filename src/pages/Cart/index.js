@@ -10,6 +10,7 @@ const mapDispatchToProps = {
   deleteRecipe
 };
 
+
 const mapStateToProps = state => ({
   // cartRecipes: state.cartReducer.cartRecipes
   cartRecipes: state.recipeReducer.cartRecipes
